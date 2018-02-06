@@ -1,6 +1,6 @@
-var restify = require('restify');
+import * as restify from 'restify';
 
-var bot = require('./bot');
+import { bot } from './bot';
 
 // Setup Restify Server
 var server = restify.createServer();
@@ -10,9 +10,9 @@ server.listen(process.env.port || process.env.PORT || 3978, function () {
 
 // home
 server.get('/', (req, res, next) => {
-    res.send('sup');
+    res.send('Productivity bot for Telegram :P https://t.me/focus5217_bot');
     next();
 });
 
 // Listen for messages from users
-server.post('/api/messages', bot.connector('*').listen());
+server.post('/api/messages', (bot.connector('*') as any).listen());
