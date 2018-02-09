@@ -2,23 +2,23 @@
   "name": "focus5217bot",
   "version": "1.0.0",
   "description": "",
-  "main": "./bin/server.js",
+  "main": "./bin/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run build:live",
-    "build:live": "nodemon --exec .\\node_modules\\.bin\\ts-node -- ./src/server.ts"
+    "build:live": "nodemon --exec .\\node_modules\\.bin\\ts-node -- ./src/app.ts"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "botbuilder": "^3.14.0",
-    "restify": "^6.3.4"
+    "restify": "^6.3.4",
+    "typescript": "^2.7.1"
   },
   "devDependencies": {
     "@types/node": "^9.4.0",
     "@types/restify": "^5.0.7",
     "nodemon": "^1.14.12",
-    "ts-node": "^4.1.0",
-    "typescript": "^2.7.1"
+    "ts-node": "^4.1.0"
   }
 }
